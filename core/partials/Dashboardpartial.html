@@ -1,0 +1,96 @@
+    	<div class="container-fluid" 	>
+        <div class="row">
+   
+          <div>
+        	<span class="desc">
+              <h2 class="dash">
+                Dashboard	
+              </h2>
+              </span>
+              <span class="sett-icon">
+              	
+                <span class="glyphicon glyphicon glyphicon-cog glyphicon-refresh-animate cog " >
+                </span>
+              </span>
+          </div>
+          <ol class="breadcrumb">
+            <li>
+              <a href="javascript:void(0);">
+                Home
+              </a>
+            </li>
+            <li class="active">
+              Dashboard
+            </li>
+            
+          </ol>
+          <thumbnail value="users" ></thumbnail>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <i class="fa fa-bell-o fa-fw">
+                </i>
+                Recent Orders
+                <div class="pull-right">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                      FilterBy
+                      <span class="caret">
+                      </span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li>
+                        <a href="javascript:void(0);">
+                          Action
+                        </a>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <div ng-grid="myOptions"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <i class="fa fa-check fa-fw">
+                  </i>
+                  Task
+                  <div class="pull-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+                        More
+                        <span class="caret">
+                        </span>
+                      </button>
+                      <ul class="dropdown-menu pull-right" role="menu">
+                        <li>
+                          <a href="javascript:void(0);">
+                            Action
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <span class="glyphicon glyphicon glyphicon-refresh " >
+                    </span>
+                  </div>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <listcheck lists="list"></listcheck>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>

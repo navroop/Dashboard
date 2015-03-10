@@ -1,0 +1,39 @@
+[
+    {
+        "id": "AM",
+        "name": "Users",
+        "process":60,
+        "value":1340
+    },
+    {
+        "id": "AR",
+        "name": "Site Visits",
+        "process":30,
+        "value":144
+    },
+    {
+        "id": "AY",
+        "name": "Orders",
+        "process":20,
+        "value":333
+    },
+    {
+        "id": "AT",
+        "name": "Revenue",
+        "process":50,
+        "value":666
+    },
+    {
+        "id": "AQ",
+        "name": "Sales",
+        "process":70,
+        "value":777
+    },
+    {
+        "id": "AW",
+        "name": "Sales",
+        "process":90,
+        "value":5555
+    }
+
+]

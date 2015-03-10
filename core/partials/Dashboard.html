@@ -1,0 +1,95 @@
+<!-- start controller-fluid -->
+<div class="container-fluid">
+<!-- navbar-row -->
+  <div class="row">
+    <nav class="navbar navbar-inverse navbar-radius navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="javascript:void(0)"  id="menu-toggle">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              
+              <span class="sr-only">
+                Toggle navigation
+              </span>
+              <span class="icon-bar">
+              </span>
+              <span class="icon-bar">
+              </span>
+              <span class="icon-bar">
+              </span>
+            </button>
+          </a>
+          <a class="navbar-brand" href="#" >
+            Brand
+          </a>
+        </div>
+      </div>
+	</nav>
+  </div>
+<!--end navbar-row -->
+ <!--start wrapper --> 
+  <div id="wrapper">
+  	<!-- start sidebar -->
+     <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="javascript:void(0)"  id="menu-toggle2" >
+            <span class="glyphicon glyphicon glyphicon-menu-left toggle-link hidden-xs">
+            </span>
+          </a>
+          <a href="javascript:void(0)"  id="menu-toggle3" style="display:none;" >
+            <span class="glyphicon glyphicon glyphicon-menu-right toggle-link3 hidden-xs" >
+              </span>
+          </a> 
+        </li>
+        <li>
+          <a href="javascript:void(0)" mytabclick data="tabs" key="Dashboard">
+            <span class="glyphicon glyphicon-home white-icon">
+            </span>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="collapsed" >
+            <span class="glyphicon glyphicon-folder-open white-icon">
+            </span>
+            Page Layouts
+            <i class="toggle fa fa-angle-down"></i>
+          </a>
+          <ul class="collapse">
+          	<li><a href="javascript:void(0);" mytabclick data="tabs" key="Header">Header</a></li>
+          	<li><a href="javascript:void(0);" mytabclick data="tabs" key="Footer">Footer</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);"  mytabclick data="tabs" key="Formstuff">
+            <span class="glyphicon glyphicon-calendar white-icon">
+            </span>
+            Form Stuff
+          </a>
+        </li>
+        
+      </ul>
+   	<!-- end sidebar -->
+    </div>
+    
+<!-- start tabs -->
+    <div id="page-content-wrapper">
+    	 
+    	 <tabset>
+	   	    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+	   		  <tab-heading>
+	          {{tab.title}} <a ng-click="removeTab($index)" href=''><i class="glyphicon glyphicon glyphicon-remove"></i></a>
+		      </tab-heading>
+		     <div ng-include="tab.content"></div> 
+		    </tab>
+ 		 </tabset>
+<!-- end tabs -->
+    </div>
+<!-- end wrapper -->
+  </div>
+<!-- end controller-fluid -->  
+</div>
+
+
+<script src="core/js/script.js">
