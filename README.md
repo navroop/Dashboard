@@ -1,6 +1,6 @@
 # Dynamic Angular Dashboard
 
-#Setup
+**Setup:**
 
 First Step
           - Npm Install
