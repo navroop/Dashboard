@@ -1,4 +1,5 @@
 angular.module('myApp').config(['$routeProvider', function($routeProvider) {
+    
   $routeProvider.
   when('/', {
     templateUrl: 'core/partials/login.html',
@@ -7,6 +8,9 @@ angular.module('myApp').config(['$routeProvider', function($routeProvider) {
   when('/Dashboard', {
     templateUrl: 'core/partials/Dashboard.html',
     controller:'DashboardController'
+  }).
+  when('/SignUp', {
+    templateUrl: 'core/partials/signup.html',
   }).
   otherwise({
     redirectTo: '/'

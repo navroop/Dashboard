@@ -20,24 +20,23 @@
 
         function link(scope, element) {
             element.bind("click", function() {
-                var flag = "",
+                var flag = false,
                     indx = 0;
                 if (scope.data.length != 0) {
                     for (indx in scope.data) {
-                        if (scope.data[indx].title == scope.key) {
+                        if (scope.data[indx].title === scope.key) {
                             flag = true;
                         }
                     }
-                    if (flag == false) {
+                    if (flag === false) {
                         var dashboard = {
                             title : scope.key,
                             content : 'core/partials/' + scope.key + 'partial.html'
                         };
                         scope.$apply(function() {
                             scope.data.push(dashboard);
-                             var index = scope.data.length - 1;
-                             var elementPos = scope.data.map(function(x) {return x.title; console.log(x.title); }).indexOf(scope.key);
-                             scope.data[elementPos].active = true;
+                             var elementPosition = scope.data.map(function(x) {return x.title; console.log(x.title); }).indexOf(scope.key);
+                             scope.data[elementPosition].active = true;
                         });
                        
                     } else {
@@ -55,9 +54,7 @@
                         scope.data.push(dashboard);
                         var index = scope.data.length - 1;
                         scope.data[index].active = true;
-                    });
-
-                   
+                    }); 
                 }
 
             });
